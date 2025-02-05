@@ -16,11 +16,6 @@ To run a test print:
 3.  Press the power button to ON.
 4.  Printer should automatically print a test page.
 
-Make sure printer power is OFF.
-Hold down the form feed button.
-Press the power button to ON.
-Printer should automatically print a test page.
-
 To find printer UUID, you can use a BLE scanner app like…
 
 https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&pcampaignid=web_share
