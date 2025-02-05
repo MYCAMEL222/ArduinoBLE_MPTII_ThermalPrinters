@@ -11,6 +11,11 @@ If you need to find printer info like a scannable printer name or MAC address, y
 
 To run a test print:
 
+1.  Make sure printer power is OFF.
+2.  Hold down the form feed button.
+3.  Press the power button to ON.
+4.  Printer should automatically print a test page.
+
 Make sure printer power is OFF.
 Hold down the form feed button.
 Press the power button to ON.
