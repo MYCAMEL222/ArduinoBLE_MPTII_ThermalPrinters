@@ -1,4 +1,4 @@
-# ArduinoBLE_MPTII
+# ArduinoBLE_MPTII_Thermal Printer Sketches
 A collection of Arduino sketches to use ArduinoBle to control MPTII style printers without a dedicated Thermal Printer library.
 
 This is not an official library for Arduino, but the sketches can be copied and hacked to meet your needs. You can also write your own functions based on ESC/POS commands (documentation is included in this repository).
