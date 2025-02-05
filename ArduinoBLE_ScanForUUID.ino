@@ -3,7 +3,7 @@
 #include "BAR_CODE_HELP.h"  //// Image data for printImage() function
 
 
-/* The following arrays define printer mode funtions.
+/* The following arrays define printer mode functions.
   You can build your own for other printer functions if desired.
   Refer to esc/pos documentation below to learn more....
   https://download4.epson.biz/sec_pubs/pos/reference_en/escpos/index.html
@@ -236,11 +236,11 @@ void printUPC_A(BLECharacteristic TPChar) {
   // peripheral.poll();
 }
 void printUPC_E(BLECharacteristic TPChar) {
-  uint8_t Height = 100;  // Set bar code height (1 to 40)
+  uint8_t Height = 100;  // Set barcode height (1 to 40)
   uint8_t TP_SBCH[] = { 0x1D, 0x68, Height };
   TPChar.writeValue(TP_SBCH, sizeof(TP_SBCH));
 
-  uint8_t Width = 4;  // Set bar code width (1,2,3 or 4)
+  uint8_t Width = 4;  // Set barcode width (1,2,3 or 4)
   uint8_t TP_SBCW[] = { 0x1D, 0x77, Width };
   TPChar.writeValue(TP_SBCW, sizeof(TP_SBCW));
 
@@ -271,11 +271,11 @@ void printUPC_E(BLECharacteristic TPChar) {
 void printEAN13(BLECharacteristic TPChar) {
   //Print bar code EAN8. 12/13 Character, numbers only 0~9
 
-  uint8_t Height = 40;  // Set bar code height (1 to 40)
+  uint8_t Height = 40;  // Set barcode height (1 to 40)
   uint8_t TP_SBCH[] = { 0x1D, 0x68, Height };
   TPChar.writeValue(TP_SBCH, sizeof(TP_SBCH));
 
-  uint8_t Width = 3;  // Set bar code width (1,2,3 or 4)
+  uint8_t Width = 3;  // Set barcode width (1,2,3 or 4)
   uint8_t TP_SBCW[] = { 0x1D, 0x77, Width };
   TPChar.writeValue(TP_SBCW, sizeof(TP_SBCW));
 
@@ -303,11 +303,11 @@ void printEAN13(BLECharacteristic TPChar) {
 void printEAN8(BLECharacteristic TPChar) {
   //Print bar code EAN8. 8 Character, numbers only 0~9
 
-  uint8_t Height = 40;  // Set bar code height (1 to 40)
+  uint8_t Height = 40;  // Set barcode height (1 to 40)
   uint8_t TP_SBCH[] = { 0x1D, 0x68, Height };
   TPChar.writeValue(TP_SBCH, sizeof(TP_SBCH));
 
-  uint8_t Width = 3;  // Set bar code width (1,2,3 or 4)
+  uint8_t Width = 3;  // Set barcode width (1,2,3 or 4)
   uint8_t TP_SBCW[] = { 0x1D, 0x77, Width };
   TPChar.writeValue(TP_SBCW, sizeof(TP_SBCW));
 
@@ -365,11 +365,11 @@ void printCODE39(BLECharacteristic TPChar) {
 }
 void printINTERLEAVED25(BLECharacteristic TPChar) {
 
-  uint8_t Height = 40;  // Set bar code height (1 to 40)
+  uint8_t Height = 40;  // Set barcode height (1 to 40)
   uint8_t TP_SBCH[] = { 0x1D, 0x68, Height };
   TPChar.writeValue(TP_SBCH, sizeof(TP_SBCH));
 
-  uint8_t Width = 2;  // Set bar code width (1,2,3 or 4)
+  uint8_t Width = 2;  // Set barcode width (1,2,3 or 4)
   uint8_t TP_SBCW[] = { 0x1D, 0x77, Width };
   TPChar.writeValue(TP_SBCW, sizeof(TP_SBCW));
 
@@ -395,11 +395,11 @@ void printINTERLEAVED25(BLECharacteristic TPChar) {
 }
 void printCODE93(BLECharacteristic TPChar) {
 
-  uint8_t Height = 40;  // Set bar code height (1 to 40)
+  uint8_t Height = 40;  // Set barcode height (1 to 40)
   uint8_t TP_SBCH[] = { 0x1D, 0x68, Height };
   TPChar.writeValue(TP_SBCH, sizeof(TP_SBCH));
 
-  uint8_t Width = 2;  // Set bar code width (1,2,3 or 4)
+  uint8_t Width = 2;  // Set barcode width (1,2,3 or 4)
   uint8_t TP_SBCW[] = { 0x1D, 0x77, Width };
   TPChar.writeValue(TP_SBCW, sizeof(TP_SBCW));
 
@@ -495,13 +495,11 @@ void printQRCODE(BLECharacteristic TPChar) {
 }
 void printImage(BLECharacteristic TPChar) {
 
-
   // change to 1 if you want to invert image colors
   bool invertImage = 0;
   int ImageSizeTest = (TESTIMAGE_WIDTH * TESTIMAGE_HEIGHT) / 8;  // used to make sure array and #defines match.
-
   if (ImageSizeTest != sizeof(testImage)) {
-    Serial.println("ERROR: TESTIMAGE_WIDTH and/or TESTIMAGE_HEIGHT not consistant with defined array size.");
+    Serial.println("ERROR: TESTIMAGE_WIDTH and/or TESTIMAGE_HEIGHT is not consistant with defined array size.");
     return;  // Stop execution
   }
   // Check if image width is valid
