@@ -3,7 +3,8 @@ A collection of Arduino sketches to use ArduinoBle to control MPTII style printe
 
 This is not an official library for Arduino, but the sketches can be copied and hacked to meet your needs. You can also write your own functions based on ESC/POS commands (documentation is included in this repository).
 
-Testing was done using a GOOJPRT PT-210. It runs the MPTII firmware. 
+Testing was done using a GOOJPRT PT-210. It runs the MPTII firmware.
+
 ![Untitled design](https://github.com/user-attachments/assets/2e5e4e18-1b1e-4957-b95b-a8c34ccc7023)
 
 ArduinoBLE allows multiple methods of scanning to find the proper printer. I will add every method of scanning eventually.
