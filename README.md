@@ -5,6 +5,7 @@ This is not an official library for Arduino, but the sketches can be copied and 
 
 Testing was done using a GOOJPRT PT-210. It runs the MPTII firmware. 
 ![Untitled design](https://github.com/user-attachments/assets/2e5e4e18-1b1e-4957-b95b-a8c34ccc7023)
+
 ArduinoBLE allows multiple methods of scanning to find the proper printer. I will add every method of scanning eventually.
 
 If you need to find printer info like a scannable printer name or MAC address, you can run a test print and that info will be printed out (most printers will do this). 
