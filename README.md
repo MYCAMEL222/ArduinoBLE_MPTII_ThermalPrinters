@@ -6,8 +6,9 @@ This is not an official library for Arduino, but the sketches can be copied and 
 Testing was done using a GOOJPRT PT-210. It runs the MPTII firmware.
 
 ![Untitled design](https://github.com/user-attachments/assets/2e5e4e18-1b1e-4957-b95b-a8c34ccc7023)
+![Untitled design (3)](https://github.com/user-attachments/assets/f4fa5be8-f062-4a49-8bc0-1b9a99a19a31)
 
-ArduinoBLE allows multiple methods of scanning to find the proper printer. I will add every method of scanning eventually.
+ArduinoBLE allows multiple methods of scanning to find the proper printer (MAC, Name and UUID).
 
 If you need to find printer info like a scannable printer name or MAC address, you can run a test print and that info will be printed out (most printers will do this). 
 
@@ -22,17 +23,11 @@ To find printer UUID, you can use a BLE scanner app like…
 
 https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&pcampaignid=web_share
 
-Our ArduinoBLE_ScanForUUID.ino scans for:
-
-BLEService "18f0" & BLECharacteristic "2af1"
+Our ArduinoBLE_ScanForUUID.ino scans for: BLEService "18f0" & BLECharacteristic "2af1".
 
 You may be able to use these sketches with other Thermal Printers by changing the UUID settings to match your printer. That has not been tested.
 
-*** Update ***
 
-Added sketch to use Adafruit GFX library to print custom text and graphics. See sample below.
-
-![Untitled design (2)](https://github.com/user-attachments/assets/0e8ef496-3a4a-4353-b579-d55b4f675f36)
 
 
 
