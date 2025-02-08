@@ -28,4 +28,11 @@ BLEService "18f0" & BLECharacteristic "2af1"
 
 You may be able to use these sketches with other Thermal Printers by changing the UUID settings to match your printer. That has not been tested.
 
+*** Update ***
+
+Added sketch to use Adafruit GFX library to print custom text and graphics. See sample below.
+
+![Untitled design (2)](https://github.com/user-attachments/assets/0e8ef496-3a4a-4353-b579-d55b4f675f36)
+
+
 
