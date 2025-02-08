@@ -1,8 +1,8 @@
 /*
-Here is a resourse to find,view and download TrueType fonts......
+Here is a resource to find,view and download TrueType fonts......
    https://fonts.google.com/
 
-Here is a great resourse to convert the .ttf files to a usable header file
+Here is a great resource to convert the .ttf files to a usable header file
 so you can define your own custom fonts and add them to your sketch.......
   https://rop.nl/truetype2gfx/
 
@@ -98,7 +98,7 @@ void loop() {
     clearCanvas();           // Clear and allocate the buffer
 
     gfx->fillRect(0, 0, canvasWidth, canvasHeight, 1);
-    gfx->fillRoundRect(10, 10, canvasWidth - 20, canvasHeight - 20, 15, 0);  //creates 5pix wide border box
+    gfx->fillRoundRect(10, 10, canvasWidth - 20, canvasHeight - 20, 15, 0);  //creates 10pix wide border box
 
     for (int i = 0; i <= 5; i++) {
       gfx->fillCircle(random(canvasWidth), random(canvasHeight), 5 * i, 1);  // x, y, r, color
@@ -286,7 +286,7 @@ void blePeripheralConnectHandler(BLEDevice peripheral) {
     } else {
       validprinter = false;
       peripheral.disconnect();
-      BLE.scanForAddress(myPrinterAddress, true);  ///// starts looking for your printer name
+      BLE.scanForAddress(myPrinterAddress, true);  ///// starts looking for your printer Address
       peripheral = BLE.available();
     }
     Serial.print("Valid Printer = ");
@@ -294,10 +294,10 @@ void blePeripheralConnectHandler(BLEDevice peripheral) {
     Serial.println();
   }
 }
-//  If printer disconnects, automatically starts searching for it again by UUID //
+//  If printer disconnects, automatically starts searching for it again by myPrinterAddress //
 void blePeripheralDisconnectHandler(BLEDevice peripheral) {
   Serial.println("Disconnected BLE event");
   validprinter = false;
-  BLE.scanForAddress(myPrinterAddress, true);  ///// starts looking for your printer name
+  BLE.scanForAddress(myPrinterAddress, true);  ///// starts looking for your printer address
   peripheral = BLE.available();
 }
