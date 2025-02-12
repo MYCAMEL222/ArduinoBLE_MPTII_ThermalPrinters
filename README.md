@@ -7,6 +7,8 @@ Testing was done using a GOOJPRT PT-210. It runs the MPTII firmware.
 
 ![Untitled design](https://github.com/user-attachments/assets/2e5e4e18-1b1e-4957-b95b-a8c34ccc7023)
 ![Untitled design (3)](https://github.com/user-attachments/assets/f4fa5be8-f062-4a49-8bc0-1b9a99a19a31)
+![testImage (2)](https://github.com/user-attachments/assets/a875c97d-428e-4afb-90e1-d4b59788035c)
+
 
 ArduinoBLE allows multiple methods of scanning to find the proper printer (MAC, Name and UUID).
 
